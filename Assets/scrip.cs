@@ -5,6 +5,10 @@ using UnityEngine;
 public class scrip : MonoBehaviour
 {
     public bool jumpable = true;
+
+    [SerializeField]
+    public int jumpForce = 200;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +19,9 @@ public class scrip : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpable ) {
-            this.GetComponent<Rigidbody>().AddForce(new Vector3(0, 200, 0));
+            this.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce);
             jumpable = false;
-        }if (this.transform.position.y == 0) {
+        }if (true) {
             jumpable = true;        }
     }
 }
