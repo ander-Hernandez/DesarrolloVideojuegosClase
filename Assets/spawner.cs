@@ -13,14 +13,18 @@ public class spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        aiming = new Vector3(0, 0, 1);
-        Debug.LogWarning(aiming);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetKey(KeyCode.RightArrow)) {
+            this.transform.Rotate((new Vector3(0, 1, 0)* 3) );
+           
+        
+        }
+
         if (coolDown > 0) {
 
             coolDown -= Time.deltaTime;
@@ -30,14 +34,14 @@ public class spawner : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-           
+          
             if (coolDown <= 0) {
                 coolDown = 1;
                 position = this.transform.position;
                GameObject newBullet = Instantiate(bullet);
-                newBullet.transform.position = this.transform.position + aiming + (Vector3.up*0.7f) ;
-                newBullet.GetComponent<Rigidbody>().AddForce(force * aiming);
-                Debug.Log(aiming);
+                newBullet.transform.position = this.transform.position + Vector3.forward + (Vector3.up*0.7f) ;
+                newBullet.GetComponent<Rigidbody>().AddForce(force * Vector3.forward);
+                Debug.Log(Vector3.forward);
                 
 
 
