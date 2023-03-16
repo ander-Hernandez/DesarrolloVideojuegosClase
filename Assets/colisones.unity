@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 1081819991}
   - component: {fileID: 1081819996}
   - component: {fileID: 1081819997}
+  - component: {fileID: 1081819998}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -544,3 +545,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1081819998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081819990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5c9c28c2399734cbe2d32e6581afe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sY: {x: 0, y: 0.1, z: 0}
+  translation: 0
+  vagones: []
+  drops: 2
