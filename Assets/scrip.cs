@@ -23,5 +23,13 @@ public class scrip : MonoBehaviour
             jumpable = false;
         }if (true) {
             jumpable = true;        }
+
+
+       
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 }
